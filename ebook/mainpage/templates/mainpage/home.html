@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mainpage</title>
+        <style>
+           
+            
+            .ul {
+            list-style-type:none;
+            margin-top: 0px;
+            padding: 45px;
+            overflow: hidden;
+            background-color: #333;
+            }
+
+            .con {
+            float: left;
+            }
+
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 10px 35px;
+            margin:8px;
+            margin-top:0px;
+            text-decoration:none;
+            font-size: 25px;
+            }
+            li a:hover {
+            background-color: #111;
+            }
+            #nav{
+                font-size: 35px;
+                padding-top:0px;
+                margin-right: 25px;
+            }
+            .nava{
+                margin-left:330px;
+            }
+            body{
+                margin:0px;
+                background-image: url("https://journeysmobilevet.com/wp-content/uploads/2016/06/Background-light-grey.jpg");
+            }
+            
+        </style>
+    </head>
+    <body>
+       <div>
+        <ul class="ul">
+            <li class="con"><a href="#" id=nav>E-book</a></li>
+            <li class="con"><a href="{% url 'mainpage' %}">Home</a></li>
+            <li class="con"><a href="#">Books</a></li>
+            <li class="con"><a href="#contact">Contact</a></li>
+            <li class="con"><a href="#about">About</a></li>
+            <li class="con"><a href="{% url 'login' %}" class="nava">Login</a></li>
+            <li class="con"><a href="{% url 'register' %}" >Signup</a></li>
+          </ul>
+        </div>
+        <br>
+        {% block content %}{% endblock %}
+    </body>
+</html>

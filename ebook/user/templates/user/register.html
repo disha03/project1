@@ -1,0 +1,22 @@
+{% extends "mainpage/home.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div >
+		<form method="POST">
+			{% csrf_token %}
+			<fieldset >
+				{{form|crispy}}
+			<br>
+			<div>
+				<button type="submit" style="padding:5px; margin-left:20px;text-align: center;">Sign Up</button>
+			</div>
+		</form>
+
+		<div>
+			<small class="text-muted" style="padding:5px; margin-left:20px;text-align: center;">
+				Already Have An Account? <a class="ml-2" href="#">Sign In</a>
+			</small>
+        </div>
+    </fieldset>
+	</div>	
+{% endblock content %}
